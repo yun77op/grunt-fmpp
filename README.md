@@ -36,7 +36,8 @@ grunt.initConfig({
   fmpp: {
     dev: {
       options: {
-        appDir: 'example/fmpp'
+        appDir: 'example/fmpp',
+        lib: 'example/fmpp/lib'
       }
     }
   },
