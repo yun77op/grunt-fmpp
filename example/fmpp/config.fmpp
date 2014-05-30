@@ -1,0 +1,69 @@
+configurationBase: ../
+sourceRoot: src/main/webapp/WEB-INF/tmpl
+#sources: [brief_content.ftl, brief_index.ftl, brief_searchResult.ftl]
+outputRoot: tmp/public
+sourceEncoding: UTF-8
+replaceExtensions: [ftl, html]
+dataRoot: data
+data: {
+    staticServer: http://weus.163.com,
+    officialServer: http://weus.163.com,
+    env_in_test: true,
+    skinUrl: http://weus.163.com
+},
+localData: [
+    case(brief_content.ftl, {
+        destCategory: {
+            title: sdf
+        },
+        categoryRoot: {
+            childCategories: [
+                {
+                    selected: true,
+                    title: sdf,
+                    briefNavItemUrlSuffix: sd
+                }
+            ]
+        },
+
+        pager: tdd(pager.tdd)
+    }),
+    case(brief_index.ftl, {
+        briefUnsupportSources: [],
+        latestPicSources: [
+            {
+                sourceUuid: 12,
+                sourceTitle: sd
+            }
+        ],
+        recommendLatestArticles: [
+            {
+                summary: sdfsdf,
+                title: sdfvsdfsdfsdflasjfdlsjdlfajsdlfjlsajflsdjflsjflsjdflsdfj,
+                summaryImage: http://sdf.com,
+                sourceUuid: sdf,
+                articleUuid: sdf
+            }
+        ]
+    }),
+    case(brief_searchResult.ftl, {
+        sourcePager: {
+            content: [
+                {
+                    iconUrl: http://weus.com,
+                    sourceUuid: sdf,
+                    title: sdf,
+                    curUserSubscribed: 1
+                }
+            ],
+            contentCount: 2,
+            currentPage: 2,
+            pageCount: 20,
+            spanStartPage: 1,
+            spanEndPage: 3,
+            firstPage: true,
+            lastPage: true
+        },
+        key: sdf
+    })
+]

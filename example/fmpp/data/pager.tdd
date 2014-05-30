@@ -1,0 +1,11 @@
+{
+    currentPage: 1,
+    pageCount: 20,
+    firstPage: true,
+    lastPage: true,
+    endPage: 10,
+    startDotLine: true,
+    startPage: 1,
+    pageSize: 10,
+    endDotLine: true
+}
