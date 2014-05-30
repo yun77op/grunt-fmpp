@@ -80,8 +80,8 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jshint', 'test']);
 
 
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+//  grunt.loadNpmTasks('grunt-contrib-connect');
+//  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('server', ['fmpp', 'connect:server', 'watch']);
 

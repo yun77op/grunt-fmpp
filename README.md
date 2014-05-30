@@ -8,22 +8,6 @@
 
 ## The "fmpp" task
 
-### Overview
-In your project's Gruntfile, add a section named `fmpp` to the data object passed into `grunt.initConfig()`.
-
-```js
-grunt.initConfig({
-  fmpp: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-});
-```
-
 ### Options
 
 #### options.appDir
@@ -34,7 +18,7 @@ Type: `String`
 #### options.lib
 Type: `String`
 
-自定的Java库目录
+自定义的Java库目录
 
 ### Usage Examples
 
@@ -50,8 +34,10 @@ fmpp的示例配置在`example/fmpp`下有`config.fmpp`和`fmpp.properties`两�
 ```js
 grunt.initConfig({
   fmpp: {
-    options: {
-      appDir: 'example/fmpp'
+    dev: {
+      options: {
+        appDir: 'example/fmpp'
+      }
     }
   },
 });
