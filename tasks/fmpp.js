@@ -10,6 +10,7 @@
 
 var exec = require('child_process').exec;
 var path = require('path');
+var os = require('os');
 
 
 module.exports = function(grunt) {
@@ -25,7 +26,14 @@ module.exports = function(grunt) {
 
     var done = this.async();
     var libpath = path.resolve(options.lib);
-    var cmd = 'java -cp .:' + __dirname  + '/lib/*:' + libpath + '/* fmpp.tools.CommandLine';
+    var cmd = ['java -cp.', __dirname + '/lib/*', libpath + '/* fmpp.tools.CommandLine'];
+    var isWin = os.platform() === 'win32';
+
+    cmd = cmd.join(isWin ? ';' : ':');
+
+    if (isWin) {
+      cmd = cmd.replace('/', '\\');
+    }
 
     exec(cmd, {
       cwd: options.appDir
