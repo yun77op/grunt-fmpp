@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
     var done = this.async();
     var libpath = path.resolve(options.lib);
-    var cmd = ['java -cp.', __dirname + '/lib/*', libpath + '/* fmpp.tools.CommandLine'];
+    var cmd = ['java -cp .', __dirname + '/lib/*', libpath + '/* fmpp.tools.CommandLine'];
     var isWin = os.platform() === 'win32';
 
     cmd = cmd.join(isWin ? ';' : ':');

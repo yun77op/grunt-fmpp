@@ -3,10 +3,7 @@
   "description": "The best Grunt plugin ever.",
   "version": "0.1.0",
   "homepage": "https://github.com/yun77op/grunt-fmpp",
-  "author": {
-    "name": "yun77op",
-    "email": "yun77op@gmail.com"
-  },
+  "author": "yun77op <yun77op@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/yun77op/grunt-fmpp.git"
@@ -14,12 +11,6 @@
   "bugs": {
     "url": "https://github.com/yun77op/grunt-fmpp/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/yun77op/grunt-fmpp/blob/master/LICENSE-MIT"
-    }
-  ],
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -38,5 +29,10 @@
   "keywords": [
     "gruntplugin",
     "freemarker"
-  ]
+  ],
+  "main": "tasks/fmpp.js",
+  "directories": {
+    "example": "example"
+  },
+  "license": "ISC"
 }
